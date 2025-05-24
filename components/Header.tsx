@@ -49,7 +49,7 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
           <Link href="/cart" className="relative">
             <button
               type="button"
-              className="bg-footerblue hover:bg-blue-900 px-4 py-2 rounded-lg flex items-center space-x-2 relative"
+              className="bg-footerblue hover:bg-yellow-400 hover:text-black px-4 py-2 rounded-lg flex items-center space-x-2 relative"
             >
               <ShoppingCart className="w-5 h-5" />
               <span>Cart</span>
