@@ -1,4 +1,4 @@
-# WhatBytes E-commerce Frontend
+# E-commerce Frontend
 
 A modern, responsive e-commerce application built with Next.js, TypeScript, and Tailwind CSS.
 
