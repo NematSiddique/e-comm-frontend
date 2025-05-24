@@ -60,8 +60,8 @@ A modern, responsive e-commerce application built with Next.js, TypeScript, and 
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/whatbytes-ecommerce.git
-cd whatbytes-ecommerce
+git clone https://github.com/NematSiddique/e-comm-frontend.git
+cd e-com-frontend
 ```
 
 2. Install dependencies
@@ -155,19 +155,6 @@ This project is configured for easy deployment on Vercel:
 1. Push your code to GitHub
 2. Connect your repository to Vercel
 3. Deploy with zero configuration
-
-## 🔮 Future Enhancements
-
-- User authentication
-- Payment integration
-- Product reviews and ratings
-- Wishlist functionality
-- Order history
-- Admin panel for product management
-
-## 📄 License
-
-This project is created for the WhatBytes frontend assignment.
 
 ---
 
