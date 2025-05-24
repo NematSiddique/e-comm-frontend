@@ -55,14 +55,14 @@ export default function Cart() {
   return (
     <>
       <Head>
-        <title>Shopping Cart - WhatBytes E-commerce</title>
+        <title>Shopping Cart</title>
       </Head>
 
       <div className="min-h-screen bg-gray-50">
         <Header 
           searchQuery={searchQuery} 
           onSearchChange={setSearchQuery} 
-        />
+      />
         
         <main className="container mx-auto px-4 py-8">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6">
@@ -87,7 +87,7 @@ export default function Cart() {
             <div className="divide-y divide-gray-200">
               {items.map((item) => (
                 <div key={item.id} className="p-6">
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center justify-between w-full flex-wrap gap-4 sm:gap-6">
                     <div className="flex-shrink-0 w-24 h-24">
                       <img
                         src={item.image}
@@ -96,7 +96,7 @@ export default function Cart() {
                       />
                     </div>
                     
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-[150px]">
                       <Link href={`/product/${item.id}`}>
                         <h3 className="text-lg font-semibold text-gray-900 hover:text-blue-600 cursor-pointer">
                           {item.title}
@@ -130,7 +130,7 @@ export default function Cart() {
                       </button>
                     </div>
                     
-                    <div className="text-right">
+                    <div className="text-right min-w-[80px]">
                       <p className="text-lg font-bold text-gray-900">
                         ${(item.price * item.quantity).toFixed(2)}
                       </p>
@@ -152,29 +152,27 @@ export default function Cart() {
 
           {/* Price Summary */}
           <div className="bg-gray-50 p-6 mt-4 rounded-lg shadow-md">
-            <div className="max-w-md ml-auto">
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-lg font-semibold">Subtotal:</span>
-                <span className="text-lg">${getTotalPrice().toFixed(2)}</span>
+            <div className="flex justify-between items-center mb-4">
+              <span className="text-lg font-semibold">Subtotal:</span>
+              <span className="text-lg">${getTotalPrice().toFixed(2)}</span>
+            </div>
+            <div className="flex justify-between items-center mb-4">
+              <span className="text-lg font-semibold">Shipping:</span>
+              <span className="text-lg">Free</span>
+            </div>
+            <div className="border-t border-gray-300 pt-4">
+              <div className="flex justify-between items-center mb-6">
+                <span className="text-xl font-bold">Total:</span>
+                <span className="text-xl font-bold text-blue-600">
+                  ${getTotalPrice().toFixed(2)}
+                </span>
               </div>
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-lg font-semibold">Shipping:</span>
-                <span className="text-lg">Free</span>
-              </div>
-              <div className="border-t border-gray-300 pt-4">
-                <div className="flex justify-between items-center mb-6">
-                  <span className="text-xl font-bold">Total:</span>
-                  <span className="text-xl font-bold text-blue-600">
-                    ${getTotalPrice().toFixed(2)}
-                  </span>
-                </div>
-                <button
-                  type="button"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg text-lg"
-                >
-                  Proceed to Checkout
-                </button>
-              </div>
+              <button
+                type="button"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-xl text-lg"
+              >
+                Proceed to Checkout
+              </button>
             </div>
           </div>
         </main>
