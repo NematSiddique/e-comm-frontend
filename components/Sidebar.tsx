@@ -10,26 +10,25 @@ export default function Sidebar({ filters, onFilterChange }: SidebarProps) {
   const categories = ['All', 'Electronics', 'Clothing', 'Home'];
   const [CategoryPrice, setCategoryPrice] = useState(filters.priceRange[1].toString());
 
-  // Handlers for the main Filters section
   const handleCategoryChange = (category: string) => {
     onFilterChange({ category });
   };
+
   const handlePriceChange = (value: number, index: number) => {
     const newPriceRange: [number, number] = [...filters.priceRange];
     newPriceRange[index] = value;
     onFilterChange({ priceRange: newPriceRange });
   };
 
-  // Handlers for the Category section (you can connect these to a different filter state if needed)
   const handleCategoryCategoryChange = (category: string) => {
     onFilterChange({ category });
   };
+
   const handleCategoryPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setCategoryPrice(value);
 
     if (value === '') {
-      // If empty, set to a high max price (or don't update filter)
       onFilterChange({ priceRange: [filters.priceRange[0], 1000] });
     } else {
       const num = Number(value);
@@ -40,7 +39,7 @@ export default function Sidebar({ filters, onFilterChange }: SidebarProps) {
   };
 
   return (
-    <div className="flex flex-col gap-8 w-64">
+    <div className="flex flex-col gap-8 w-64 flex-shrink-0">
       {/* Filters Section */}
       <div className="bg-baseblue text-white p-6 rounded-xl">
         <h2 className="text-xl font-bold mb-6">Filters</h2>

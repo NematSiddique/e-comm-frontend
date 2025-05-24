@@ -20,18 +20,21 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
   }, []);
 
   return (
-    <header className="bg-baseblue text-white">
-      <div className="container mx-auto flex items-center justify-between p-4 gap-4 flex-wrap">
-        
-        {/* Logo */}
-        <div className="flex-shrink-0">
-          <Link href="/" className="text-2xl font-bold">
-            Logo
-          </Link>
-        </div>
+    <header className="bg-baseblue text-white relative">
+      {/* Logo pinned absolutely to the left edge */}
+      <div className="absolute left-0 top-0 h-full flex items-center px-4 lg:px-8">
+        <Link href="/" className="p-1 text-2xl font-bold whitespace-nowrap">
+          Logo
+        </Link>
+      </div>
 
-        {/* Search bar */}
-        <div className="flex-1 max-w-md mx-auto w-full">
+      {/* Main container: centered with max width, padding adjusted */}
+      <div className="max-w-screen-xl w-full mx-auto px-4 flex items-center justify-between p-4 gap-4 flex-wrap">
+        {/* Spacer div to take space on the left so search bar stays centered */}
+        <div className="w-24 lg:w-32" />
+
+        {/* Search bar (flex-grow, max width, centered) */}
+        <div className="flex-1 max-w-md mx-4 w-full">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white" />
             <input
@@ -44,8 +47,8 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
           </div>
         </div>
 
-        {/* Cart & User */}
-        <div className="flex items-center space-x-4">
+        {/* Cart & User (right side) */}
+        <div className="flex items-center space-x-4 flex-shrink-0">
           <Link href="/cart" className="relative">
             <button
               type="button"

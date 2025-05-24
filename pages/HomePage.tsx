@@ -109,7 +109,7 @@ export default function Home() {
         <main className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row lg:gap-8">
             {/* Sidebar */}
-            <aside className="mb-8 lg:mb-0 lg:w-80 flex-shrink-0 w-full">
+            <aside className="mb-8 lg:mb-0 lg:w-80 flex-shrink-0 w-full lg:sticky lg:top-20">
               <Sidebar filters={filters} onFilterChange={handleFilterChange} />
             </aside>
 
@@ -125,7 +125,7 @@ export default function Home() {
                 </div>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                  {products.map(product => (
+                  {filteredProducts.map(product => (
                     <div key={product.id} className="h-full">
                       <ProductCard product={product} />
                     </div>

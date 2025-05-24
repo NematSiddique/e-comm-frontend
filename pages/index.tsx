@@ -56,7 +56,7 @@ export default function Home() {
             {filteredProducts.map(product => (
               <div
                 key={product.id}
-                className="bg-white rounded-lg shadow flex flex-col justify-between h-full"
+                className="bg-white rounded-lg shadow flex flex-col justify-between h-full transform transition-transform duration-300 hover:scale-105"
               >
                 {/* Image */}
                 <Link href={`/product/${product.id}`}>
@@ -81,15 +81,13 @@ export default function Home() {
 
                   {/* Push button to bottom */}
                   <div className="mt-auto">
-                    <Link href={`/product/${product.id}`}>
-                      <button
+                    <button
                       type="button"
                       onClick={() => handleAddToCart(product)}
                       className="w-full bg-baseblue hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-                      >
-                        Add to Cart
-                      </button>
-                    </Link>
+                    >
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
               </div>

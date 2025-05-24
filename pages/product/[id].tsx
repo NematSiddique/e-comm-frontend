@@ -73,7 +73,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
         
         <main className="container mx-auto px-4 py-8">
           {/* Back Button */}
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6">
+          <Link href="/" className="inline-flex items-center text-baseblue hover:text-darkblue mb-6">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Products
           </Link>
@@ -152,7 +152,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 <button
                   type="button"
                   onClick={handleAddToCart}
-                  className="w-full bg-baseblue hover:bg-footerblue text-white font-semibold py-3 px-4 rounded-xl text-lg transition-colors"
+                  className="w-full bg-baseblue hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-4 rounded-xl text-lg transition-colors"
                 >
                   Add to Cart - ${(product.price * quantity).toFixed(2)}
                 </button>
