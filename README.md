@@ -4,7 +4,7 @@ A modern, responsive e-commerce application built with Next.js, TypeScript, and 
 
 ## 🚀 Live Demo
 
-**Deployed URL:** [Your Vercel Deployment URL Here]
+**Deployed URL:** [https://e-comm-frontend-pink.vercel.app/](https://e-comm-frontend-pink.vercel.app/)
 
 ## 📋 Features
 
