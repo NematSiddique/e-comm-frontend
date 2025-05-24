@@ -3,15 +3,15 @@ import type { Product } from '../types';
 const products: Product[] = [
   {
     id: '1',
-    title: 'Running Shoes',
+    title: 'Shoes',
     price: 99,
-    image: '/shoes.jpg',
+    image: '/shoes1.jpg',
     category: 'Clothing',
     description: 'Comfortable running shoes perfect for daily exercise and long-distance runs. Features breathable mesh upper and cushioned sole for maximum comfort.'
   },
   {
     id: '2',
-    title: 'Wireless Headphones',
+    title: 'Headphones',
     price: 99,
     image: '/headphones.jpg',
     category: 'Electronics',
@@ -43,7 +43,7 @@ const products: Product[] = [
   },
   {
     id: '6',
-    title: 'Digital Camera',
+    title: 'Camera',
     price: 499,
     image: '/camera.jpg',
     category: 'Electronics',

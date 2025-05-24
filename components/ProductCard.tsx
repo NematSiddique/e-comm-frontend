@@ -107,7 +107,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <button
           type="button"
           onClick={handleAddToCart}
-          className="mt-4 w-full bg-baseblue hover:bg-blue-800 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 self-end"
+          className="mt-4 w-full bg-yellow-400 hover:bg-green-400 text-black font-semibold py-3 px-4 rounded-lg transition-all duration-300 self-end"
         >
           Add to Cart
         </button>

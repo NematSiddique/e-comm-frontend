@@ -4,12 +4,14 @@ import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import products from '../data/products';
 import Link from 'next/link';
+import { useCartStore } from '../store/cartStore';
+import type { Product } from '../types';
 
 // Define a type for your filters
 type Filters = {
   category: string;
   priceRange: [number, number];
-  searchQuery: string; // <-- not optional
+  searchQuery: string;
 };
 
 export default function Home() {
@@ -20,18 +22,22 @@ export default function Home() {
     searchQuery: '',
   });
 
-  // Add the type annotation here
+  const addItem = useCartStore(state => state.addItem);
+
   const handleFilterChange = (newFilters: Partial<Filters>) => {
     setFilters((prev) => ({ ...prev, ...newFilters }));
   };
 
-  const filteredProducts = products
-    .filter(product =>
-      (filters.category === 'All' || product.category === filters.category) &&
-      product.price >= (filters.priceRange?.[0] ?? 0) &&
-      product.price <= (filters.priceRange?.[1] ?? 1000) &&
-      product.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+  const handleAddToCart = (product: Product) => {
+    addItem(product);
+  };
+
+  const filteredProducts = products.filter(product =>
+    (filters.category === 'All' || product.category === filters.category) &&
+    product.price >= (filters.priceRange?.[0] ?? 0) &&
+    product.price <= (filters.priceRange?.[1] ?? 1000) &&
+    product.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className="min-h-screen flex flex-col bg-[#f6f9fc]">
@@ -48,15 +54,44 @@ export default function Home() {
           <h1 className="text-3xl font-bold mb-6">Product Listing</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProducts.map(product => (
-              <div key={product.id} className="bg-white p-4 rounded-lg shadow flex flex-col items-center">
-                <img src={product.image} alt={product.title} className="w-40 h-40 object-contain mb-4" />
-                <h2 className="text-lg font-semibold text-center">{product.title}</h2>
-                <p className="text-gray-700 font-bold mb-2">${product.price}</p>
+              <div
+                key={product.id}
+                className="bg-white rounded-lg shadow flex flex-col justify-between h-full"
+              >
+                {/* Image */}
                 <Link href={`/product/${product.id}`}>
-                  <button type="button" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors mb-2">
-                    Add to Cart
-                  </button>
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-48 object-contain p-4"
+                  />
                 </Link>
+
+                {/* Content */}
+                <div className="flex flex-col flex-grow p-4">
+                  <Link href={`/product/${product.id}`}>
+                    <h2 className="text-lg font-semibold text-left mb-2 hover:text-blue-600">
+                      {product.title}
+                    </h2>
+                  </Link>
+
+                  <p className="text-gray-700 font-bold text-left mb-4">
+                    ${product.price}
+                  </p>
+
+                  {/* Push button to bottom */}
+                  <div className="mt-auto">
+                    <Link href={`/product/${product.id}`}>
+                      <button
+                      type="button"
+                      onClick={() => handleAddToCart(product)}
+                      className="w-full bg-baseblue hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                      >
+                        Add to Cart
+                      </button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
