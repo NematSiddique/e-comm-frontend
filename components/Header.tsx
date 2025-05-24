@@ -20,13 +20,18 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
   }, []);
 
   return (
-    <header className="bg-blue-700 text-white">
-      <div className="container mx-auto flex items-center justify-between p-4">
-        <Link href="/" className="text-2xl font-bold">
-          Logo
-        </Link>
+    <header className="bg-baseblue text-white">
+      <div className="container mx-auto flex items-center justify-between p-4 gap-4 flex-wrap">
         
-        <div className="flex-1 max-w-md mx-8">
+        {/* Logo */}
+        <div className="flex-shrink-0">
+          <Link href="/" className="text-2xl font-bold">
+            Logo
+          </Link>
+        </div>
+
+        {/* Search bar */}
+        <div className="flex-1 max-w-md mx-auto w-full">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white" />
             <input
@@ -34,16 +39,17 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
               placeholder="Search for products..."
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 rounded-lg border border-blue-400 bg-blue-600 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300"
+              className="w-full pl-10 pr-4 py-2 rounded-lg border border-lightblue bg-baseblue text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
         </div>
-        
+
+        {/* Cart & User */}
         <div className="flex items-center space-x-4">
           <Link href="/cart" className="relative">
             <button
               type="button"
-              className="bg-blue-800 hover:bg-blue-900 px-4 py-2 rounded-lg flex items-center space-x-2"
+              className="bg-footerblue hover:bg-blue-900 px-4 py-2 rounded-lg flex items-center space-x-2 relative"
             >
               <ShoppingCart className="w-5 h-5" />
               <span>Cart</span>
@@ -60,4 +66,3 @@ export default function Header({ searchQuery, onSearchChange }: HeaderProps) {
     </header>
   );
 }
-

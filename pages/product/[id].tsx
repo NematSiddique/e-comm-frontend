@@ -103,7 +103,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                     </div>
                   )}
                   
-                  <p className="text-3xl font-bold text-blue-600 mb-4">
+                  <p className="text-3xl font-bold text-baseblue mb-4">
                     ${product.price}
                   </p>
                 </div>
@@ -117,7 +117,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Category</h3>
-                  <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                  <span className="inline-block bg-blue-100 text-footerblue px-3 py-1 rounded-full text-sm">
                     {product.category}
                   </span>
                 </div>
@@ -152,7 +152,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 <button
                   type="button"
                   onClick={handleAddToCart}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg text-lg transition-colors"
+                  className="w-full bg-baseblue hover:bg-footerblue text-white font-semibold py-3 px-4 rounded-xl text-lg transition-colors"
                 >
                   Add to Cart - ${(product.price * quantity).toFixed(2)}
                 </button>

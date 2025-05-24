@@ -65,7 +65,7 @@ export default function Cart() {
       />
         
         <main className="container mx-auto px-4 py-8">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6">
+          <Link href="/" className="inline-flex items-center text-baseblue hover:text-footerblue mb-6">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Products
           </Link>
@@ -98,12 +98,12 @@ export default function Cart() {
                     
                     <div className="flex-1 min-w-[150px]">
                       <Link href={`/product/${item.id}`}>
-                        <h3 className="text-lg font-semibold text-gray-900 hover:text-blue-600 cursor-pointer">
+                        <h3 className="text-lg font-semibold text-gray-900 hover:text-baseblue cursor-pointer">
                           {item.title}
                         </h3>
                       </Link>
                       <p className="text-gray-600 text-sm mt-1">{item.category}</p>
-                      <p className="text-xl font-bold text-blue-600 mt-2">${item.price}</p>
+                      <p className="text-xl font-bold text-baseblue mt-2">${item.price}</p>
                     </div>
                     
                     <div className="flex items-center space-x-3">
@@ -163,13 +163,13 @@ export default function Cart() {
             <div className="border-t border-gray-300 pt-4">
               <div className="flex justify-between items-center mb-6">
                 <span className="text-xl font-bold">Total:</span>
-                <span className="text-xl font-bold text-blue-600">
+                <span className="text-xl font-bold text-baseblue">
                   ${getTotalPrice().toFixed(2)}
                 </span>
               </div>
               <button
                 type="button"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-xl text-lg"
+                className="w-full bg-baseblue hover:bg-yellow-400 hover:text-black text-white font-semibold py-2 px-6 rounded-xl text-lg"
               >
                 Proceed to Checkout
               </button>

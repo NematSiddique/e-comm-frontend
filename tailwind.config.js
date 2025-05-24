@@ -12,7 +12,12 @@ module.exports = {
           500: '#1d4ed8',
           600: '#1e40af',
           700: '#1e3a8a',
-        }
+        },
+        baseblue: '#1d57a8',
+        darkblue: '#0e3873',
+        footerblue: '#072b5c',
+        lightblue: '#5d87c2',
+        // bluebutton: '#3067b3',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],

@@ -42,7 +42,7 @@ export default function Sidebar({ filters, onFilterChange }: SidebarProps) {
   return (
     <div className="flex flex-col gap-8 w-64">
       {/* Filters Section */}
-      <div className="bg-blue-700 text-white p-6 rounded-xl">
+      <div className="bg-baseblue text-white p-6 rounded-xl">
         <h2 className="text-xl font-bold mb-6">Filters</h2>
         {/* Category Filter */}
         <div className="mb-8">
@@ -56,7 +56,7 @@ export default function Sidebar({ filters, onFilterChange }: SidebarProps) {
                   value={category}
                   checked={filters.category === category}
                   onChange={() => handleCategoryChange(category)}
-                  className="w-4 h-4 text-blue-300 bg-transparent border-2 border-white focus:ring-blue-300 focus:ring-2"
+                  className="w-4 h-4 text-blue-300 bg-transparent border-2 border-white focus:ring-blue-300"
                 />
                 <span className="ml-3">{category}</span>
               </label>
@@ -72,7 +72,7 @@ export default function Sidebar({ filters, onFilterChange }: SidebarProps) {
             max="1000"
             value={filters.priceRange[1]}
             onChange={(e) => handlePriceChange(Number(e.target.value), 1)}
-            className="w-full h-2 bg-blue-400 rounded-lg appearance-none cursor-pointer slider"
+            className="w-full h-2 bg-lightblue rounded-lg appearance-none cursor-pointer slider"
             title="Select maximum price"
           />
           <div className="flex justify-between text-sm mt-2">
@@ -83,8 +83,8 @@ export default function Sidebar({ filters, onFilterChange }: SidebarProps) {
       </div>
 
       {/* Category Section */}
-      <div className="bg-white text-blue-900 p-6 rounded-lg shadow">
-        <h3 className="text-lg font-bold mb-4">Category</h3>
+      <div className="bg-white text-black p-6 rounded-lg shadow">
+        <h3 className="text-lg font-bold mb-4">Cacyroy</h3>
         {/* Category */}
         <div className="mb-6">
           {categories.map((category) => (
@@ -95,7 +95,7 @@ export default function Sidebar({ filters, onFilterChange }: SidebarProps) {
                 value={category}
                 checked={filters.category === category}
                 onChange={() => handleCategoryCategoryChange(category)}
-                className="w-4 h-4 text-blue-600 bg-transparent border-2 border-blue-600 focus:ring-blue-300 focus:ring-2"
+                className="w-4 h-4 text-blue-600 bg-transparent border-2 border-blue-600 focus:ring-blue-300"
               />
               <span className="ml-3">{category}</span>
             </label>
@@ -108,7 +108,7 @@ export default function Sidebar({ filters, onFilterChange }: SidebarProps) {
             type="number"
             value={CategoryPrice}
             onChange={handleCategoryPriceChange}
-            className="w-full px-3 py-2 bg-white border border-blue-400 rounded text-blue-900 placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="w-full px-3 py-2 rounded-xl bg-white border border-black text-black placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300"
             placeholder="Max price"
             min={0}
           />
