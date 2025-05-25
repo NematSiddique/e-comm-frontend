@@ -17,7 +17,7 @@ module.exports = {
         darkblue: '#0e3873',
         footerblue: '#072b5c',
         lightblue: '#5d87c2',
-        // bluebutton: '#3067b3',
+        socialblue: '#3d6cad0',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
