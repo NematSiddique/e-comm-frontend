@@ -22,7 +22,7 @@ export default function Cart() {
     return (
       <>
         <Head>
-          <title>Shopping Cart - WhatBytes E-commerce</title>
+          <title>Shopping Cart E-commerce</title>
         </Head>
 
         <div className="min-h-screen bg-gray-50">
