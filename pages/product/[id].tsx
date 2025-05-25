@@ -118,7 +118,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   return (
     <>
       <Head>
-        <title>{product.title} - E-commerce</title>
+        <title>{product.title} - WhatBytes E-commerce</title>
         <meta name="description" content={product.description} />
       </Head>
 
@@ -144,7 +144,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                   <div className="flex flex-col gap-2 w-16">
                     {productImages.map((image, index) => (
                       <button
-                        key={`${product.id}-${image}`}
+                        key={image}
                         type="button"
                         onClick={() => setCurrentImageIndex(index)}
                         className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 flex-shrink-0 ${
@@ -178,7 +178,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                       alt={`${product.title} view ${currentImageIndex + 1}`}
                       className="w-full h-full object-cover transition-transform duration-200 ease-out"
                       style={{
-                        transform: isZooming ? 'scale(1.5)' : 'scale(1)',
+                        transform: isZooming ? 'scale(2)' : 'scale(1)',
                         transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`
                       }}
                     />
@@ -207,11 +207,9 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                     )}
 
                     {/* Zoom Indicator */}
-                    {isZooming && (
-                      <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm pointer-events-none">
-                        🔍 Hover to zoom
-                      </div>
-                    )}
+                    <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm pointer-events-none opacity-0 hover:opacity-100 transition-opacity">
+                      🔍 Hover to zoom
+                    </div>
                   </div>
 
                   {/* Zoom Hint */}
@@ -221,24 +219,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 </div>
               </div>
 
-              {/* Zoomed View (Desktop Only) */}
-              {isZooming && (
-                <div className="hidden lg:block fixed top-0 right-0 w-1/2 h-full bg-white shadow-2xl z-50 border-l border-gray-200">
-                  <div className="w-full h-full relative overflow-hidden">
-                    <div
-                      className="absolute inset-0 bg-cover bg-no-repeat"
-                      style={{
-                        backgroundImage: `url(${productImages[currentImageIndex]})`,
-                        backgroundPosition: `${zoomPosition.x}% ${zoomPosition.y}%`,
-                        backgroundSize: '300%', // 3x zoom
-                      }}
-                    />
-                    <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
-                      Zoomed View
-                    </div>
-                  </div>
-                </div>
-              )}
+
 
               {/* Details Section */}
               <div className="space-y-6">
