@@ -7,7 +7,8 @@ const products: Product[] = [
     price: 99,
     image: '/shoes.jpg',
     category: 'Clothing',
-    description: 'Comfortable running shoes perfect for daily exercise and long-distance runs. Features breathable mesh upper and cushioned sole for maximum comfort.'
+    description: 'Comfortable running shoes perfect for daily exercise and long-distance runs. Features breathable mesh upper and cushioned sole for maximum comfort.',
+    rating: 4.6
   },
   {
     id: '2',
@@ -15,7 +16,8 @@ const products: Product[] = [
     price: 99,
     image: '/headphones.jpg',
     category: 'Electronics',
-    description: 'High-quality wireless headphones with noise cancellation technology. Perfect for music lovers and professionals.'
+    description: 'High-quality wireless headphones with noise cancellation technology. Perfect for music lovers and professionals.',
+    rating: 4.5
   },
   {
     id: '3',
@@ -23,7 +25,8 @@ const products: Product[] = [
     price: 129,
     image: '/backpack.jpg',
     category: 'Home',
-    description: 'Durable and spacious backpack ideal for work, school, or travel. Multiple compartments for organized storage.'
+    description: 'Durable and spacious backpack ideal for work, school, or travel. Multiple compartments for organized storage.',
+    rating: 4.7
   },
   {
     id: '4',
@@ -31,7 +34,8 @@ const products: Product[] = [
     price: 249,
     image: '/smartwatch.jpg',
     category: 'Electronics',
-    description: 'Advanced smartwatch with fitness tracking, heart rate monitoring, and smartphone connectivity.'
+    description: 'Advanced smartwatch with fitness tracking, heart rate monitoring, and smartphone connectivity.',
+    rating: 4.4
   },
   {
     id: '5',
@@ -39,7 +43,8 @@ const products: Product[] = [
     price: 149,
     image: '/sunglasses.jpg',
     category: 'Clothing',
-    description: 'Stylish sunglasses with UV protection. Perfect for outdoor activities and fashion-forward individuals.'
+    description: 'Stylish sunglasses with UV protection. Perfect for outdoor activities and fashion-forward individuals.',
+    rating: 4.5 
   },
   {
     id: '6',
@@ -47,7 +52,8 @@ const products: Product[] = [
     price: 499,
     image: '/camera.jpg',
     category: 'Electronics',
-    description: 'Professional-grade digital camera with high-resolution sensor and advanced features for photography enthusiasts.'
+    description: 'Professional-grade digital camera with high-resolution sensor and advanced features for photography enthusiasts.',
+    rating: 4.8 
   },
   {
     id: '7',
@@ -55,7 +61,8 @@ const products: Product[] = [
     price: 29,
     image: '/tshirt.jpg',
     category: 'Clothing',
-    description: 'Comfortable cotton t-shirt available in various colors. Perfect for casual wear and everyday comfort.'
+    description: 'Comfortable cotton t-shirt available in various colors. Perfect for casual wear and everyday comfort.',
+    rating: 4
   },
   {
     id: '8',

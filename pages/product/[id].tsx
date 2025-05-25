@@ -35,43 +35,43 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     router.push('/cart');
   };
 
-  // const renderStars = (rating?: number) => {
-  //   if (!rating) return null;
+  const renderStars = (rating?: number) => {
+    if (!rating) return null;
 
-  //   const stars: React.ReactNode[] = [];
-  //   const fullStars = Math.floor(rating);
-  //   const hasHalfStar = rating % 1 !== 0;
-  //   const emptyStars = 5 - Math.ceil(rating);
+    const stars: React.ReactNode[] = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+    const emptyStars = 5 - Math.ceil(rating);
 
-  //   for (let i = 0; i < fullStars; i++) {
-  //     stars.push(
-  //       <Star
-  //         key={`full-${i}`}
-  //         className="w-5 h-5 fill-yellow-400 text-yellow-400"
-  //       />
-  //     );
-  //   }
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(
+        <Star
+          key={`full-${i}`}
+          className="w-5 h-5 fill-yellow-400 text-yellow-400"
+        />
+      );
+    }
 
-  //   if (hasHalfStar) {
-  //     stars.push(
-  //       <Star
-  //         key="half"
-  //         className="w-5 h-5 fill-yellow-400 text-yellow-400 opacity-50"
-  //       />
-  //     );
-  //   }
+    if (hasHalfStar) {
+      stars.push(
+        <Star
+          key="half"
+          className="w-5 h-5 fill-yellow-400 text-yellow-400 opacity-50"
+        />
+      );
+    }
 
-  //   for (let i = 0; i < emptyStars; i++) {
-  //     stars.push(
-  //       <Star
-  //         key={`empty-${i}`}
-  //         className="w-5 h-5 text-gray-300"
-  //       />
-  //     );
-  //   }
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(
+        <Star
+          key={`empty-${i}`}
+          className="w-5 h-5 text-gray-300"
+        />
+      );
+    }
 
-  //   return <>{stars}</>;
-  // };
+    return <>{stars}</>;
+  };
 
   return (
     <>
@@ -111,12 +111,12 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                     {product.title}
                   </h1>
                   
-                  {/* {product.rating && (
+                  {product.rating && (
                     <div className="flex items-center mb-4">
                       {renderStars(product.rating)}
                       <span className="ml-2 text-gray-600">({product.rating})</span>
                     </div>
-                  )} */}
+                  )}
                   
                   <p className="text-3xl font-bold text-baseblue mb-4">
                     ${product.price}

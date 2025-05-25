@@ -14,45 +14,45 @@ export default function ProductCard({ product }: ProductCardProps) {
     addItem(product);
   };
 
-  // const renderStars = (rating?: number, productId?: string | number) => {
-  //   if (!rating) return null;
+  const renderStars = (rating?: number, productId?: string | number) => {
+    if (!rating) return null;
 
-  //   const stars = [];
-  //   const fullStars = Math.floor(rating);
-  //   const hasHalfStar = rating % 1 !== 0;
-  //   const emptyStars = 5 - Math.ceil(rating);
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+    const emptyStars = 5 - Math.ceil(rating);
 
-  //   for (let i = 0; i < fullStars; i++) {
-  //     stars.push(
-  //       <Star
-  //         key={`${productId}-full-${i}`}
-  //         className="w-4 h-4 fill-yellow-400 text-yellow-400"
-  //       />
-  //     );
-  //   }
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(
+        <Star
+          key={`${productId}-full-${i}`}
+          className="w-4 h-4 fill-yellow-400 text-yellow-400"
+        />
+      );
+    }
 
-  //   if (hasHalfStar) {
-  //     stars.push(
-  //       <div key={`${productId}-half`} className="relative w-4 h-4 inline-block">
-  //         <Star className="w-4 h-4 text-gray-300" />
-  //         <div className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
-  //           <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-  //         </div>
-  //       </div>
-  //     );
-  //   }
+    if (hasHalfStar) {
+      stars.push(
+        <div key={`${productId}-half`} className="relative w-4 h-4 inline-block">
+          <Star className="w-4 h-4 text-gray-300" />
+          <div className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
+            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+          </div>
+        </div>
+      );
+    }
 
-  //   for (let i = 0; i < emptyStars; i++) {
-  //     stars.push(
-  //       <Star
-  //         key={`${productId}-empty-${i}`}
-  //         className="w-4 h-4 text-gray-300"
-  //       />
-  //     );
-  //   }
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(
+        <Star
+          key={`${productId}-empty-${i}`}
+          className="w-4 h-4 text-gray-300"
+        />
+      );
+    }
 
-  //   return stars;
-  // };
+    return stars;
+  };
 
 
   return (
@@ -81,7 +81,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             </span>
           </div>
 
-          {/* {product.rating && (
+          {product.rating && (
             <div className="mb-3 text-left">
               <div className="flex items-center space-x-1 justify-start">
                 <div className="flex items-center space-x-0.5">
@@ -92,13 +92,13 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </span>
               </div>
             </div>
-          )} */}
+          )}
         </div>
 
         <button
           type="button"
           onClick={handleAddToCart}
-          className="mt-2 w-full text-white bg-baseblue hover:bg-yellow-400 hover:text-black font-semibold py-2 px-4 rounded-lg transition-all duration-300 self-end"
+          className="mt-2 w-full text-white bg-baseblue hover:bg-yellow-400 hover:text-black font-semibold py-2 px-4 rounded-xl transition-all duration-300 self-end"
         >
           Add to Cart
         </button>
