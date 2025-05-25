@@ -56,7 +56,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
       stars.push(
         <Star
           key="half"
-          className="w-5 h-5 fill-yellow-400 text-yellow-400 opacity-50"
+          className="w-5 h-5 fill-yellow-400 text-yellow-400 opacity-40"
         />
       );
     }

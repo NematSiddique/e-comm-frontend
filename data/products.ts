@@ -8,7 +8,7 @@ const products: Product[] = [
     image: '/shoes.jpg',
     category: 'Clothing',
     description: 'Comfortable running shoes perfect for daily exercise and long-distance runs. Features breathable mesh upper and cushioned sole for maximum comfort.',
-    rating: 4.6
+    rating: 3.8
   },
   {
     id: '2',
@@ -26,7 +26,7 @@ const products: Product[] = [
     image: '/backpack.jpg',
     category: 'Home',
     description: 'Durable and spacious backpack ideal for work, school, or travel. Multiple compartments for organized storage.',
-    rating: 4.7
+    rating: 3.9
   },
   {
     id: '4',
@@ -53,7 +53,7 @@ const products: Product[] = [
     image: '/camera.jpg',
     category: 'Electronics',
     description: 'Professional-grade digital camera with high-resolution sensor and advanced features for photography enthusiasts.',
-    rating: 4.8 
+    rating: 3.8 
   },
   {
     id: '7',
