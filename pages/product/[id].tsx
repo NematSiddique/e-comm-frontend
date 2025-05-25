@@ -118,7 +118,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   return (
     <>
       <Head>
-        <title>{product.title} - WhatBytes E-commerce</title>
+        <title>{product.title} - E-commerce</title>
         <meta name="description" content={product.description} />
       </Head>
 
