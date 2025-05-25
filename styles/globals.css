@@ -39,3 +39,10 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.star-half {
+  width: 50%;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}

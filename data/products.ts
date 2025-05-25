@@ -5,7 +5,7 @@ const products: Product[] = [
     id: '1',
     title: 'Shoes',
     price: 99,
-    image: '/shoes1.jpg',
+    image: '/shoes.jpg',
     category: 'Clothing',
     description: 'Comfortable running shoes perfect for daily exercise and long-distance runs. Features breathable mesh upper and cushioned sole for maximum comfort.'
   },
