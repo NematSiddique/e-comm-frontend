@@ -39,7 +39,7 @@ export default function Sidebar({ filters, onFilterChange }: SidebarProps) {
   };
 
   return (
-    <div className="flex flex-col gap-8 w-64 flex-shrink-0">
+    <div className="flex flex-col gap-8 w-64 flex-shrink-0 h-full overflow-y-auto">
       {/* Filters Section */}
       <div className="bg-baseblue text-white p-6 rounded-xl">
         <h2 className="text-xl font-bold mb-6">Filters</h2>
