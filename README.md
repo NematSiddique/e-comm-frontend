@@ -6,20 +6,25 @@ A modern, responsive e-commerce application built with Next.js, TypeScript, and 
 
 **Deployed URL:** [https://e-comm-frontend-pink.vercel.app/](https://e-comm-frontend-pink.vercel.app/)
 
+---
+
 ## 📋 Features
 
 ### ✅ Implemented Features
 
-- **Home Page (/) - Product Listing**
+- **Home Page (/**) - Product Listing
   - Responsive product grid (3 columns desktop, 2 tablet, 1 mobile)
   - Category filtering with radio buttons
   - Price range slider filter
   - Search functionality with real-time filtering
   - URL-based filters (e.g., `?category=electronics&price=0-1000`)
   - Product cards with image, title, price, rating, and "Add to Cart" button
+  - **Hover to zoom** on product images
 
 - **Product Detail Page (/product/[id])**
   - Dynamic routing with Next.js
+  - **Image carousel** for multiple product images
+  - **Hover to zoom** on main product image
   - Large product image display
   - Product details (title, price, description, category)
   - Star ratings display
@@ -35,11 +40,10 @@ A modern, responsive e-commerce application built with Next.js, TypeScript, and 
 
 - **Additional Features**
   - Client-side state management with Zustand
-  - Persistent cart state in localStorage
   - Responsive design matching the provided mockup
-  - Search filtering with string matching
-  - Category and price filtering
   - Clean, modern UI with Tailwind CSS
+
+---
 
 ## 🛠️ Technology Stack
 
@@ -49,62 +53,68 @@ A modern, responsive e-commerce application built with Next.js, TypeScript, and 
 - **Icons:** Lucide React
 - **Deployment:** Vercel
 
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository
-```bash
-git clone https://github.com/NematSiddique/e-comm-frontend.git
-cd e-com-frontend
-```
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/NematSiddique/e-comm-frontend.git
+    cd e-com-frontend
+    ```
 
-2. Install dependencies
-```bash
-npm install
-# or
-yarn install
-```
+2. **Install dependencies**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-3. Run the development server
-```bash
-npm run dev
-# or
-yarn dev
-```
+3. **Run the development server**
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. **Open [http://localhost:3000](http://localhost:3000) in your browser**
+
+---
 
 ## 📁 Project Structure
 
 ```
-whatbytes-ecommerce/
+e-com-frontend/
 ├── components/           # Reusable UI components
-│   ├── Header.tsx       # Navigation header with search
-│   ├── Sidebar.tsx      # Filter sidebar
-│   ├── ProductCard.tsx  # Product card component
-│   └── Footer.tsx       # Page footer
-├── data/                # Mock data
-│   └── products.ts      # Product data
-├── pages/               # Next.js pages
-│   ├── index.tsx        # Home page
-│   ├── cart.tsx         # Shopping cart page
-│   ├── product/         # Product detail pages
-│   │   └── [id].tsx     # Dynamic product page
-│   └── _app.tsx         # App configuration
-├── store/               # State management
-│   └── cartStore.ts     # Cart state with Zustand
-├── styles/              # Global styles
-│   └── globals.css      # Tailwind CSS imports
-├── types/               # TypeScript type definitions
-│   └── index.ts         # Interface definitions
-└── README.md           # Project documentation
+│   ├── Header.tsx        # Navigation header with search
+│   ├── Sidebar.tsx       # Filter sidebar
+│   ├── ProductCard.tsx   # Product card component
+│   └── Footer.tsx        # Page footer
+├── data/                 # Mock data
+│   └── products.ts       # Product data
+├── pages/                # Next.js pages
+│   ├── index.tsx         # Home page
+│   ├── cart.tsx          # Shopping cart page
+│   ├── product/          # Product detail pages
+│   │   └── [id].tsx      # Dynamic product page
+│   └── _app.tsx          # App configuration
+├── store/                # State management
+│   └── cartStore.ts      # Cart state with Zustand
+├── styles/               # Global styles
+│   └── globals.css       # Tailwind CSS imports
+├── types/                # TypeScript type definitions
+│   └── index.ts          # Interface definitions
+└── README.md             # Project documentation
 ```
+
+---
 
 ## 🎯 Key Features Implementation
 
@@ -126,12 +136,16 @@ whatbytes-ecommerce/
   - Tablet: Two column grid  
   - Desktop: Three column grid + sidebar
 
+---
+
 ## 🔧 Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint
+- `npm run dev` — Start development server
+- `npm run build` — Build for production
+- `npm start` — Start production server
+- `npm run lint` — Run ESLint
+
+---
 
 ## 📱 Responsive Breakpoints
 
@@ -139,14 +153,20 @@ whatbytes-ecommerce/
 - **Tablet:** 768px - 1024px  
 - **Desktop:** > 1024px
 
+---
+
 ## 🎨 Design Implementation
 
 The UI closely matches the provided mockup with:
-- Blue color scheme (#1d4ed8, #1e40af, #1e3a8a)
+- Blue color scheme (`#2a53ad`, `#1d4ed8`, `#1e40af`, `#1e3a8a`)
 - Consistent spacing and typography
 - Hover states and transitions
+- **Hover to zoom** on product images
+- **Image carousel** on product detail page
 - Accessible form controls
 - Professional product card design
+
+---
 
 ## 🚀 Deployment
 
